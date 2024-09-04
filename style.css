@@ -10,45 +10,89 @@ body {
   }
   
   /* Navigation */
-  nav {
-    width: 90%;
-    background: transparent;
-    color: white;
-    position: fixed;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo{
-    color: #d3a677;
-    float: left;
-    font-size: 3rem;
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
+  /* Navigation */
+nav {
+  background-color: transparent;
+  color: #d3a677;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 90%;
+}
+
+nav .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 200;
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #d3a677;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav ul li a.active {
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   nav ul {
-    float: right;
-    list-style: none;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  nav ul.show {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
   }
-  
+
   nav ul li {
-    margin: 0 15px;
+    margin: 0;
+    text-align: center;
   }
-  
+
   nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
-  
-  nav ul li a.active {
     color: #d3a677;
+    padding: 15px;
+    display: block;
   }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
   
   /* Header with Hero Image */
   header {
@@ -327,3 +371,32 @@ body {
     }
   }
   
+  /* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #fff;
+  color: #d3a677;
+  transform: scale(1.1);
+}
+
+/* Font Awesome Icon */
+.fas.fa-chevron-up {
+  font-size: 1.5rem;
+}
