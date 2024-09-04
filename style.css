@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Navigation */
+  nav {
+    width: 90%;
+    background: transparent;
+    color: white;
+    position: fixed;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo{
+    color: #d3a677;
+    float: left;
+    font-size: 3rem;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  nav ul {
+    float: right;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a.active {
+    color: #d3a677;
+  }
+  
+  /* Header with Hero Image */
+  header {
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.5rem;
+  }
+  
+  header .btn {
+    padding: 15px 30px;
+    background-color: #d3a677;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  header .btn:hover {
+    background-color: #d3a677;
+    transform: scale(1.05);
+  }
+  
+  /* About Section with Grid Layout */
+#about {
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  #about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #d3a677;
+  }
+  
+  /* Grid Layout for About Section */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-content {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Hover effect on Image */
+  .about-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-image img {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  /* Skills Section with Progress Bars */
+  #skills h2{
+    text-align: center;
+    color: #d3a677;
+  }
+  .skills-container {
+    padding: 50px;
+    background-color: #eee;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .skill h3 {
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+  }
+  
+  .progress {
+    background-color: #d3a677;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 1s ease;
+  }
+  
+  .skills-container .skill {
+    animation: slideInLeft 1.2s ease-out;
+  }
+  
+  /* Portfolio Section with Image Gallery */
+ /* Portfolio Section with Grid Layout */
+#portfolio {
+    padding: 50px;
+    background-color: #fff;
+  }
+  
+  #portfolio h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #d3a677;
+  }
+  
+  /* Grid Layout for Portfolio Items */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .project {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #d3a677;
+  }
+  
+  .project p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .project:hover {
+    transform: scale(1.05);
+  }
+  
+  .project img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+    
+  /* Contact Section */
+  #contact {
+    padding: 50px;
+    background-color: #fff;
+    color: #d3a677;
+    animation: slideInRight 1.2s ease-out;
+  }
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-form input, 
+  #contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #contact-form button {
+    padding: 15px;
+    background-color: #d3a677;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #contact-form button:hover {
+    background-color: #d3a677;
+  }
+  
+  /* Social Icons in Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d3a677;
+    color: white;
+  }
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #fadcbb;
+    transform: scale(1.2);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+  }
+  
+  @keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    #about, .skills-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #about img {
+      width: 100%;
+    }
+  
+    #portfolio {
+      grid-template-columns: 1fr;
+    }
+  }
+  
